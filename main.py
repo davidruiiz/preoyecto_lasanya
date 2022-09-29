@@ -1,5 +1,6 @@
 #timepo que la lasaña debería estar en el horno acorde con el libro de cocina
 EXPECTED_BAKE_TIME = 40
+PREPARATION_TIME = 2
 
 def bake_time_remaining(elapsed_bake_time):
     
@@ -11,5 +12,16 @@ def bake_time_remaining(elapsed_bake_time):
  """
     
     return EXPECTED_BAKE_TIME - elapsed_bake_time
+def preparation_time_in_minutes(number_of_layers):
+    """Calcular el tiempo de preparación.
+
+    :param number_of_layers: introducir el número de capas de la lasaña
+    :return: devulve cuanto tiempo (en minutos) ha tardado en prepararlo, teniendo en cuenta que son dos minutos más por capa añadida.
+    """
+    return number_of_layers * PREPARATION_TIME
+
+
+
+
 
 
