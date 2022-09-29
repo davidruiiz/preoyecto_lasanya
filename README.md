@@ -173,6 +173,29 @@ Define expected bake time in minutes
 
 Define an EXPECTED_BAKE_TIME constant that returns how many minutes the lasagna should bake in the oven. According to your cookbook, the Lasagna should be in the oven for 40 minutes:
 
+
 >>> import lasagna
 >>> lasagna.EXPECTED_BAKE_TIME
 40
+
+>>> from lasagna import bake_time_remaining
+>>> bake_time_remaining(30)
+10
+
+>>> from lasagna import preparation_time_in_minutes
+>>> preparation_time_in_minutes(2)
+4
+
+>>> from lasagna import elapsed_time_in_minutes
+>>> elapsed_time_in_minutes(3, 20)
+26
+
+def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
+    """
+    Return elapsed cooking time.
+
+    This function takes two numbers representing the number of layers & the time already spent 
+    baking and calculates the total elapsed minutes spent cooking the lasagna.
+    """
+
+
